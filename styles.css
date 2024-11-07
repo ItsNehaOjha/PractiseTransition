@@ -1,0 +1,319 @@
+html, body{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#page1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #282828;
+    
+    background: rgb(86,81,81);
+background: linear-gradient(285deg, rgba(86,81,81,1) 13%, rgba(16,20,16,1) 19%, rgba(25,28,24,1) 88%, rgba(86,81,81,1) 94%);
+}
+
+/* navbar  */
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #fdfdfd;
+    padding: 1rem;
+    /* position: sticky;
+    top: 0;
+    z-index: 100;  */
+    /* */
+}
+/* navbar logo  */
+
+nav img{
+    height: 2rem;
+}
+.logo{
+    display: flex;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: bolder;
+}
+.UpVote{
+    margin-top: 6px;
+    font-size: 25px;
+}
+.logo span{
+    margin-left: 12px;
+    
+}
+.logo:hover{
+    cursor: pointer;
+    
+}
+.color{
+    color: #69bc52;
+
+}
+
+/* navbar ul  */
+.navbar ul{
+    display: flex;
+}
+.navbar ul li{
+    list-style: none;   
+}
+.navbar ul li a{
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    font-family: "Abcgintonord 800", sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 120%;
+    position: relative;
+}
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 1rem;
+    width: 100%;
+    height: 3px;
+    background-color: #FEFEFE;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease, background-color 0.3s;
+    transform: scaleX(0);
+}
+ul a:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+   
+}
+
+/* navbar button  */
+
+
+.navBtn h2 a{
+    text-decoration: none;
+    color:#131111;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.1;
+    z-index: 9;
+    position: relative;
+}
+.navBtn h2:hover a{
+    color: white;
+}
+
+
+.navBtn h2{
+    border-radius: 50px;
+    background-color: #69bc52;
+    border: 1px solid #dbcfdb;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    position: relative;
+    transition: all ease 0.4s;
+    overflow: hidden;
+
+}
+.navBtn h2::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    
+    background-color: #282828;
+    left:0;
+    bottom: -100%;
+    border-radius: 50px;
+    transition: all ease 0.4s;
+
+}   
+.navBtn h2:hover::after{
+    bottom: 0;   
+    border-radius: 50px;
+}
+
+
+/* header  */
+
+#center{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:center;
+    margin: 12px;
+
+    color: #fdfdfd;
+}
+#left {
+    width: 39vw;
+    font-size: 2vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 3.5vw;
+    text-transform: uppercase;
+
+}
+#left p{
+    line-height: 2vw;
+}
+#right img{
+    height: 20vw;
+    margin-left: 20px;
+}
+
+
+/* Community Button */
+.communityBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    
+}
+.communityBtn h2{
+    border-radius: 50px;
+    background-color: #69bc52;
+    border: 1px solid #dbcf;
+    letter-spacing: 0.1em;
+    margin-left: 20px;
+    padding: 10px 30px;
+    position: relative;
+    transition: all ease 0.4s;
+    overflow: hidden;
+    
+}
+
+.communityBtn h2 a{
+    text-decoration: none;
+    color:#131111;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.1;
+    z-index: 9;
+    position: relative;
+}
+.communityBtn h2:hover a{
+    color: rgb(211, 204, 204);
+}
+
+.communityBtn h2::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #282828;
+    left:0;
+    bottom: -100%;
+    border-radius: 50px;
+    transition: all ease 0.4s;
+
+}   
+.communityBtn h2:hover::after{
+    bottom: 0;   
+    border-radius: 50px;
+}
+
+/* animation */
+
+#heroSection{
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right:0;
+    top:100vh
+}
+#hero1{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #565151;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter:blur(10px);
+}
+#hero2{
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    background: linear-gradient(#565151,#565151);
+    border-radius: 50%;
+    filter:blur(25px);
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#hero3{
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    background: linear-gradient(#565151,#565151);
+    border-radius: 50%;
+    
+    filter:blur(20px);
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes anime1 {
+    from{
+        transform: translate(55%,-2%);
+    }
+    to{
+        transform: translate(0%,10%);
+    }
+    
+    
+}
+@keyframes anime2 {
+    from{
+        transform: translate(5%,-5%);
+    }
+    to{
+        transform: translate(-20%,30%);
+    }
+    
+    
+}
+
+/* section 2 */
+
+#page1 .section2{
+    position :relative;
+    margin-top: 4vw;
+    width: 90%;
+    height: 35vw;
+    background-color: transparent;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #fdfdfd;
+}
+.section2para{
+    width: 47vw;
+    background: rgb(86,81,81);
+    border-radius: 20px;
+    background: linear-gradient(351deg, rgba(86,81,81,1) 0%, rgba(25,28,24,1) 12%, rgba(25,28,24,1) 87%, rgba(86,81,81,1) 96%);
+    
+}
+.section2Heading{
+    width: 40vw;
+    border-top-left-radius: 30px;
+    background-color:transparent;
+
+  
+}
+
